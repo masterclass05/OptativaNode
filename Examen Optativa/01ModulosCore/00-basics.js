@@ -9,4 +9,4 @@ setInterval(function (){
    console.log('Hola Node.js')
 }, 1000)
 //Ctrl + C detengo la ejecución de un script en la consola
-//Ejecutar node .\00basics.js
+//Ejecutar node .\00-basics.js
