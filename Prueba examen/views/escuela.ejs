@@ -1,0 +1,29 @@
+<%- include("templates/cabecera",{tituloweb:"Tabla Escuela"}) %>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Grados</th>
+                    <th scope="col">Descripción</th>
+                    <th scope="col">Ubicacion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (arrayEscuela.length> 0) { %>
+          <!--Haremos el foreach para recorrer el array-->
+          <% arrayEscuela.forEach(escuela => { %>
+              <tr>
+                  <th scope="row"><%= escuela.Nombre %></th>
+                  <td><%= escuela.Ubicacion %></td>
+                  <td><%= escuela.Descripción %></td>
+                  <td><%= escuela.Grados %></td>
+                  <td>Aciones</td>
+              </tr>
+          <% }) %>
+      <% } %>
+            </tbody>
+        </table>
+    </div>
+<%- include("templates/cierre") %>
